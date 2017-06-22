@@ -6,7 +6,7 @@ register(['.sass', '.scss', '.css']);
 
 const exposedProperties = ['window', 'navigator', 'document'];
 
-global.document = jsdom('');
+global.document = jsdom('<body><div id="app"></div></body>');
 global.window = document.defaultView;
 Object.keys(document.defaultView).forEach((property) => {
   if (typeof global[property] === 'undefined') {
