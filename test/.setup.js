@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { jsdom } from 'jsdom';
 import register from 'ignore-styles';
-
-register(['.sass', '.scss', '.css']);
+import hook from 'css-modules-require-hook';
+import { shallow, mount } from 'enzyme';
 
 const exposedProperties = ['window', 'navigator', 'document'];
 
